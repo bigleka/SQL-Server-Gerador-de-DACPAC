@@ -1,0 +1,9 @@
+c:\users\rlroveri\documents\visual studio 2013\Projects\Gerador de DACPAC\Gerador de DACPAC\bin\Debug\Gerador de DACPAC.exe.config
+C:\Users\rlroveri\documents\visual studio 2013\Projects\Gerador de DACPAC\Gerador de DACPAC\obj\Debug\Gerador de DACPAC.csprojResolveAssemblyReference.cache
+C:\Users\rlroveri\documents\visual studio 2013\Projects\Gerador de DACPAC\Gerador de DACPAC\obj\Debug\Gerador_de_DACPAC.Form1.resources
+C:\Users\rlroveri\documents\visual studio 2013\Projects\Gerador de DACPAC\Gerador de DACPAC\obj\Debug\Gerador_de_DACPAC.Properties.Resources.resources
+C:\Users\rlroveri\documents\visual studio 2013\Projects\Gerador de DACPAC\Gerador de DACPAC\obj\Debug\Gerador de DACPAC.csproj.GenerateResource.Cache
+C:\Users\rlroveri\documents\visual studio 2013\Projects\Gerador de DACPAC\Gerador de DACPAC\bin\Debug\Gerador de DACPAC.exe
+C:\Users\rlroveri\documents\visual studio 2013\Projects\Gerador de DACPAC\Gerador de DACPAC\bin\Debug\Gerador de DACPAC.pdb
+C:\Users\rlroveri\documents\visual studio 2013\Projects\Gerador de DACPAC\Gerador de DACPAC\obj\Debug\Gerador de DACPAC.exe
+C:\Users\rlroveri\documents\visual studio 2013\Projects\Gerador de DACPAC\Gerador de DACPAC\obj\Debug\Gerador de DACPAC.pdb
