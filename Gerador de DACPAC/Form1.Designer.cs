@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.conectar = new System.Windows.Forms.Button();
             this.SaveAs = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.AbrirDiretorio = new System.Windows.Forms.CheckBox();
             this.extrair = new System.Windows.Forms.Button();
             this.fechar = new System.Windows.Forms.Button();
             this.ServidorDB = new System.Windows.Forms.TextBox();
@@ -42,6 +43,9 @@
             this.DestinoDialogo = new System.Windows.Forms.FolderBrowserDialog();
             this.LocalizarSqlPackage = new System.Windows.Forms.OpenFileDialog();
             this.LocalSqlPackage = new System.Windows.Forms.TextBox();
+            this.YMD = new System.Windows.Forms.CheckBox();
+            this.Permissoes = new System.Windows.Forms.CheckBox();
+            this.MultiExtrator = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // conectar
@@ -64,14 +68,16 @@
             this.SaveAs.UseVisualStyleBackColor = true;
             this.SaveAs.Click += new System.EventHandler(this.SaveAs_Click);
             // 
-            // checkBox1
+            // AbrirDiretorio
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(239, 82);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.AbrirDiretorio.AutoSize = true;
+            this.AbrirDiretorio.Checked = true;
+            this.AbrirDiretorio.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.AbrirDiretorio.Location = new System.Drawing.Point(239, 82);
+            this.AbrirDiretorio.Name = "AbrirDiretorio";
+            this.AbrirDiretorio.Size = new System.Drawing.Size(15, 14);
+            this.AbrirDiretorio.TabIndex = 2;
+            this.AbrirDiretorio.UseVisualStyleBackColor = true;
             // 
             // extrair
             // 
@@ -146,10 +152,9 @@
             this.BasesDACPAC.Sorted = true;
             this.BasesDACPAC.TabIndex = 11;
             // 
-            // LocalizarSqlPackage
+            // DestinoDialogo
             // 
-            this.LocalizarSqlPackage.FileName = "SqlPackage.exe";
-            this.LocalizarSqlPackage.InitialDirectory = "C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DAC\\bin";
+            this.DestinoDialogo.Description = "Utilizar diretório que NÃO contenha espaço no nome. Ex. \"Nova Pasta\"";
             // 
             // LocalSqlPackage
             // 
@@ -157,15 +162,46 @@
             this.LocalSqlPackage.Name = "LocalSqlPackage";
             this.LocalSqlPackage.Size = new System.Drawing.Size(75, 20);
             this.LocalSqlPackage.TabIndex = 12;
-            this.LocalSqlPackage.Text = "\"C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DAC\\bin\\SqlPackage.exe\"";
             this.LocalSqlPackage.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             this.LocalSqlPackage.DoubleClick += new System.EventHandler(this.LocalSqlPackage_DoubleClick);
+            // 
+            // YMD
+            // 
+            this.YMD.AutoSize = true;
+            this.YMD.Location = new System.Drawing.Point(116, 6);
+            this.YMD.Name = "YMD";
+            this.YMD.Size = new System.Drawing.Size(50, 17);
+            this.YMD.TabIndex = 13;
+            this.YMD.Text = "YMD";
+            this.YMD.UseVisualStyleBackColor = true;
+            // 
+            // Permissoes
+            // 
+            this.Permissoes.AutoSize = true;
+            this.Permissoes.Location = new System.Drawing.Point(62, 5);
+            this.Permissoes.Name = "Permissoes";
+            this.Permissoes.Size = new System.Drawing.Size(50, 17);
+            this.Permissoes.TabIndex = 14;
+            this.Permissoes.Text = "Perm";
+            this.Permissoes.UseVisualStyleBackColor = true;
+            // 
+            // MultiExtrator
+            // 
+            this.MultiExtrator.AutoSize = true;
+            this.MultiExtrator.Location = new System.Drawing.Point(239, 120);
+            this.MultiExtrator.Name = "MultiExtrator";
+            this.MultiExtrator.Size = new System.Drawing.Size(15, 14);
+            this.MultiExtrator.TabIndex = 15;
+            this.MultiExtrator.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(272, 273);
+            this.ClientSize = new System.Drawing.Size(269, 273);
+            this.Controls.Add(this.MultiExtrator);
+            this.Controls.Add(this.Permissoes);
+            this.Controls.Add(this.YMD);
             this.Controls.Add(this.LocalSqlPackage);
             this.Controls.Add(this.BasesDACPAC);
             this.Controls.Add(this.label3);
@@ -175,11 +211,14 @@
             this.Controls.Add(this.ServidorDB);
             this.Controls.Add(this.fechar);
             this.Controls.Add(this.extrair);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.AbrirDiretorio);
             this.Controls.Add(this.SaveAs);
             this.Controls.Add(this.conectar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerador de DACPAC";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -192,7 +231,7 @@
 
         private System.Windows.Forms.Button conectar;
         private System.Windows.Forms.Button SaveAs;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox AbrirDiretorio;
         private System.Windows.Forms.Button extrair;
         private System.Windows.Forms.Button fechar;
         private System.Windows.Forms.TextBox ServidorDB;
@@ -204,6 +243,9 @@
         private System.Windows.Forms.FolderBrowserDialog DestinoDialogo;
         public System.Windows.Forms.OpenFileDialog LocalizarSqlPackage;
         private System.Windows.Forms.TextBox LocalSqlPackage;
+        private System.Windows.Forms.CheckBox YMD;
+        private System.Windows.Forms.CheckBox Permissoes;
+        private System.Windows.Forms.CheckBox MultiExtrator;
     }
 }
 
